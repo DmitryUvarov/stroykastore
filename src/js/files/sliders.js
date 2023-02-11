@@ -1,5 +1,5 @@
 /*
-Документация по работе в шаблоне: 
+Документация по работе в шаблоне:
 Документация слайдера: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
@@ -10,7 +10,7 @@
 import Swiper, { Navigation } from 'swiper';
 /*
 Основниые модули слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Подробнее смотри https://swiperjs.com/
 */
@@ -27,16 +27,16 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.slider-special-offers')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.slider-special-offers', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 40,
 			autoHeight: true,
 			speed: 800,
 
@@ -73,8 +73,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.slider-special-offers .button-prev',
+				nextEl: '.slider-special-offers .button-next',
 			},
 
 			// Брейкпоинты

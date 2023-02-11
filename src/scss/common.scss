@@ -1,1 +1,111 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+/// BUTTONS
+
+.button {
+  cursor: pointer;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: 136%;
+  color: $darkColor;
+  height: rem(48);
+
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease 0s;
+
+  @media (min-width: $mobile) {
+    min-width: rem(147);
+  }
+  @media (max-width: $mobile) {
+    min-width: rem(132);
+    height: rem(46);
+    font-size: rem(15);
+  }
+
+  &_primary {
+    background-color: #fcec41;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $whiteColor;
+        background-color: #2f323a;
+      }
+    }
+  }
+  &_secondary {
+    min-width: rem(136);
+    border: 1px solid #d1d1d3;
+    background-color: $whiteColor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $whiteColor;
+        background-color: #2f323a;
+      }
+    }
+  }
+}
+
+/// BUTTONS END
+
+/// SLIDER
+
+.slider-control {
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: em(20);
+  width: 100%;
+  &__button {
+    cursor: pointer;
+    pointer-events: all;
+    flex: 0 0 rem(52);
+    height: rem(52);
+    background-color: #ffffff;
+    border: 1px solid #d1d1d3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+      font-size: rem(16);
+      color: $greyColor2;
+      transform: translateY(1px);
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:not(.swiper-button-disabled):hover {
+        background-color: #2f323a;
+        border-color: #2f323a;
+        &::before {
+          color: $whiteColor;
+        }
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+      &::before {
+        color: $greyColor4;
+      }
+    }
+  }
+
+  .button-prev {
+    &::before {
+      transform: scale(-1, 1) translateY(1px);
+    }
+  }
+  .button-next {
+  }
+}
+
+/// SLIDERS END

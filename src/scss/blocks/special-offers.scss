@@ -1,0 +1,147 @@
+.page {
+  &__special-offers {
+  }
+}
+.special-offers {
+  &__container {
+    max-width: em(1390);
+  }
+
+  &__body {
+    padding: em(40) 0;
+
+    @media (max-width: $mobile) {
+      padding: em(30) 0 rem(20);
+    }
+  }
+
+  &__slider {
+  }
+}
+.slider-special-offers {
+  position: relative;
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.slide-special-offers {
+  position: relative;
+
+  &__body {
+    position: relative;
+    padding: em(40) 0;
+    @media (min-width: em($containerWidth + 80)) {
+      max-width: em($containerWidth);
+      margin: 0 auto;
+    }
+    @media (max-width: em($containerWidth + 80)) {
+      padding: em(40);
+    }
+    @media (max-width: $mobileSmall) {
+      padding: em(20);
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+      min-height: rem(340);
+    }
+    @media (min-width: $mobileSmall) and (max-width: $tablet) {
+      min-height: rem(280);
+    }
+    @media (max-width: $mobileSmall) {
+      min-height: rem(163);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(48);
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: $darkColor;
+    max-width: rem(570);
+
+    margin-bottom: em(20, 48);
+
+    @media (max-width: $mobile) {
+      font-size: rem(34);
+      margin-bottom: em(20, 34);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(26);
+      margin-bottom: em(4, 26);
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    color: $greyColor2;
+    max-width: rem(570);
+
+    margin-bottom: em(15, 20);
+
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+      margin-bottom: em(15, 18);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(13);
+      margin-bottom: em(10, 13);
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+
+  &__control {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+
+    @media (max-width: em($containerWidth)) {
+      right: 40px;
+    }
+    @media (min-width: em($containerWidth)) and (max-width: em(1390)) {
+      padding-right: calc(((100vw - 1190px) / 2) - 15px);
+    }
+    @media (min-width: em(1390)) {
+      padding-right: calc((100% - 1190px) / 2);
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
