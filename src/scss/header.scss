@@ -18,7 +18,7 @@
     background-color: #fff;
     display: block;
     transition: left 0.3s ease 0s;
-    z-index: 5;
+    z-index: 21;
     border-bottom: 1px solid #e8e9ea;
   }
 
@@ -101,14 +101,14 @@
       width: 100%;
       height: 100%;
       overflow-y: auto;
-      z-index: 5;
+      z-index: 20;
       transition: left 0.3s ease 0s;
       background-color: #fff;
 
       display: flex;
       flex-direction: column;
 
-      padding: rem(122) rem(15) rem(45);
+      padding: rem(138) rem(15) rem(45);
 
       .menu-open & {
         left: 0;
@@ -186,7 +186,7 @@
     }
   }
   &__logo {
-    z-index: 5;
+    z-index: 21;
     @media (min-width: $mobile) {
       flex: 1 1 auto;
     }
@@ -263,7 +263,7 @@
   transition: all 0.3s ease 0s;
 
   position: relative;
-  z-index: 5;
+  z-index: 21;
 
   @media (max-width: $tablet) {
     max-width: none;
@@ -338,7 +338,7 @@
     display: grid;
     flex: 0 0 rem(82);
     gap: em(2, 15);
-    z-index: 5;
+    z-index: 21;
 
     transition: all 0.3s ease 0s;
 
@@ -464,7 +464,7 @@
     width: rem(18);
     height: rem(14);
     cursor: pointer;
-    z-index: 5;
+    z-index: 21;
     span,
     &::before,
     &::after {
