@@ -32,6 +32,7 @@
 }
 .slide-special-offers {
   position: relative;
+  touch-action: none;
 
   &__body {
     position: relative;
@@ -58,7 +59,7 @@
       min-height: rem(280);
     }
     @media (max-width: $mobileSmall) {
-      min-height: rem(163);
+      min-height: rem(166);
     }
   }
 
@@ -141,6 +142,19 @@
       padding-right: calc((100% - 1190px) / 2);
     }
     @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+
+    @media (max-width: $mobileSmall) {
+      bottom: 20px;
+    }
+    @media (min-width: $mobile) {
       display: none;
     }
   }
